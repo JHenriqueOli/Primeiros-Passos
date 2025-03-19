@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="midia/favicon-gato.ico" type="image/x-icon">
+    <title>Multi mídia</title>
+</head>
+<body>
+    <h1>Trabalhando com Multi Mídia</h1>
+    <hr>
+    <h2>Imagem dinâmica</h2>
+    <p>Temte abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu naveador.</p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="midia/pequeno.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="midia/medio.png" type="image/png">
+        <img src="midia/grande.png" alt="Imagem flexível">
+    </picture>
+    <h2>Reproduzindo Áudio</h2>
+    <p>Vamos aprender a reproduzir áudios no HTML5.</p>
+    <audio preload="metadata" autoplay controls loop>
+        <source src="som/yourintro.mp3" type="audio/mpeg">
+        <p>Infelizmente o seu navegador não é comsegue reproduzir áudios. <a href="som/yourintro.mp3">Cicle aqui para baixar o arquivo mp3</a></p>
+    </audio>
+</body>
+</html>
