@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sem errar</title>
+</head>
+<body>
+    <h1>Já parou para pensar que horas são?</h1>
+    <p>Me conte, que horas são? <input type="number" id="erro"></p>
+    <input type="button" value="confirme" onclick="suicidio()">
+    <input type="button" value="Clique" onclick="buum()">
+    <div id="div"></div>
+    <script>
+        function buum() {
+            var sis = new Date()
+            var hora = sis.getHours()
+            //var idiota = document.getElementById('erro')
+            //var hora = Number(idiota.value)
+            var res = document.getElementById('div')
+            res.innerHTML = `<p>Pois bem, agora é ${hora} horas</p>`
+            if (hora < 5) {
+                res.innerHTML += '<p>Vai dormir vagabundo!</p>'
+            } else if (hora < 12) {
+                res.innerHTML += '<p>Bom dia!</p>'
+            } else if ( hora < 18) {
+                res.innerHTML += '<p>boa tarde</p>'
+            } else if (hora > 17) {
+                res.innerHTML += '<p>Boa noite</p>'
+            }
+        }
+    </script>
+</body>
+</html>

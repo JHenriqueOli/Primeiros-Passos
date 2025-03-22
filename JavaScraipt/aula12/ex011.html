@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições Alinhadas</title>
+</head>
+<body>
+    <h1>Você é obrigado a votar?</h1>
+    <p>No bloco a seguir você podera saber se seu voto é obrigatório ou opcional informando a sua idade.</p>
+    <p>Sua idade: <input type="number" id="idade"></p>
+    <input type="button" value="VERIFIQUE" onclick="Verifique()">
+    <div id="res"></div>
+    <script>
+        function Verifique() {
+        var cu = document.getElementById('idade')
+        var idade = Number(cu.value)
+        var res = document.getElementById('res')
+        res.innerHTML = 'Sua idade é: ' + idade
+        if (idade < 16 ) {
+            res.innerHTML += ' Não vota'
+        } else if (idade < 18 || idade > 65) {
+                res.innerHTML += ' Voto opcional'
+            } else { 
+                res.innerHTML += ' Voto obrigatório'
+            }
+        }
+    </script>
+</body>
+</html>
